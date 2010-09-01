@@ -10,7 +10,8 @@ Source0:	http://downloads.sourceforge.net/project/libdmtx/libdmtx/0.7.2/%{name}-
 Group:		Development/C++
 License: 	GPLv2
 URL:		http://www.libdmtx.org
-BuildRequires:	libpng-devel libtiff-devel
+BuildRequires:	png-devel 
+BuildRequires:  tiff-devel
 BuildRequires:	imagemagick-devel
 BuildRoot: 	%{_tmppath}/%{name}-root
 
@@ -36,6 +37,7 @@ Summary: %{name} library package
 %defattr(-,root,root)
 %{_libdir}/%{name}.so.%{major}*
 %{_mandir}/man3/%{name}*
+
 #-------------------------------------------------------------------------------
 
 %package -n %develname
@@ -73,6 +75,7 @@ to test %{name} and to learn its behavior.
 %{_mandir}/man1/dmtxquery*
 %{_mandir}/man1/dmtxread*
 %{_mandir}/man1/dmtxwrite*
+
 #-------------------------------------------------------------------------------
 
 %prep
