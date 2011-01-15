@@ -13,7 +13,6 @@ URL:		http://www.libdmtx.org
 BuildRequires:	png-devel 
 BuildRequires:  tiff-devel
 BuildRequires:	imagemagick-devel
-BuildRoot: 	%{_tmppath}/%{name}-root
 
 %description
 libdmtx is open source software for reading and writing Data Matrix 2D barcodes
