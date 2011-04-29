@@ -4,7 +4,7 @@
 
 Name:		libdmtx
 Version:	0.7.2
-Release:	%mkrel 1
+Release:	%mkrel 2
 Summary:	a library for reading and writing Data Matrix 2D barcodes
 Source0:	http://downloads.sourceforge.net/project/libdmtx/libdmtx/0.7.2/%{name}-%{version}.tar.bz2
 Group:		Development/C++
