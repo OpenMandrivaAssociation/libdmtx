@@ -4,7 +4,7 @@
 
 Name:		libdmtx
 Version:	0.7.4
-Release:	2
+Release:	3
 Summary:	A library for reading and writing Data Matrix 2D barcodes
 Group:		Development/C++
 License: 	GPLv2
