@@ -1,16 +1,18 @@
+# We use the provided (custom) autogen.sh instead
+%global _disable_rebuild_configure 1
+
 %define major 0
 %define libname %mklibname dmtx %{major}
 %define devname %mklibname -d dmtx
 
 Name:		libdmtx
-Version:	0.7.4
-Release:	14
+Version:	0.7.5
+Release:	1
 Summary:	A library for reading and writing Data Matrix 2D barcodes
 Group:		Development/C++
 License: 	GPLv2
-Url:		http://libdmtx.wikidot.com/
-# Git repository without tags at https://github.com/dmtx/libdmtx
-Source0:	https://downloads.sourceforge.net/project/libdmtx/libdmtx/%{version}/libdmtx-%{version}.tar.bz2
+Url:		https://github.com/dmtx/libdmtx
+Source0:	https://github.com/dmtx/libdmtx/archive/v%{version}.tar.gz
 
 %description
 libdmtx is open source software for reading and writing Data Matrix 2D barcodes
@@ -29,14 +31,14 @@ Group:		Development/C++
 Summary:	%{name} developement files
 Provides:	%{name}-devel = %{version}-%{release}
 Requires:	%{libname} = %{version}-%{release}
-Obsoletes:	%{name} < 0.7.4
 
 %description -n %{devname}
-This package contains header files needed when building applications based on
-%{name}.
+This package contains header files needed when building applications based
+on %{name}.
 
 %prep
-%setup -q
+%autosetup -p1
+./autogen.sh
 
 %build
 %configure
@@ -54,4 +56,3 @@ This package contains header files needed when building applications based on
 %{_libdir}/%{name}.so
 %{_libdir}/pkgconfig/%{name}.pc
 %{_mandir}/man3/%{name}*
-
