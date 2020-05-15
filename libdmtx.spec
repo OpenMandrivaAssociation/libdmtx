@@ -42,10 +42,10 @@ on %{name}.
 
 %build
 %configure
-%make
+%make_build
 
 %install
-%makeinstall_std
+%make_install
 
 %files -n %{libname}
 %{_libdir}/%{name}.so.%{major}*
