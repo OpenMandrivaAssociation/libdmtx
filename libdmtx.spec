@@ -6,8 +6,8 @@
 %define devname %mklibname -d dmtx
 
 Name:		libdmtx
-Version:	0.7.5
-Release:	2
+Version:	0.7.7
+Release:	1
 Summary:	A library for reading and writing Data Matrix 2D barcodes
 Group:		Development/C++
 License: 	GPLv2
