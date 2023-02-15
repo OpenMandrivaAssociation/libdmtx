@@ -5,14 +5,14 @@
 %define libname %mklibname dmtx %{major}
 %define devname %mklibname -d dmtx
 
-Name:		libdmtx
-Version:	0.7.7
-Release:	1
-Summary:	A library for reading and writing Data Matrix 2D barcodes
-Group:		Development/C++
-License: 	GPLv2
-Url:		https://github.com/dmtx/libdmtx
-Source0:	https://github.com/dmtx/libdmtx/archive/v%{version}/%{name}-%{version}.tar.gz
+Summary:  A library for reading and writing Data Matrix 2D barcodes
+Name:   libdmtx
+Version:  0.7.7
+Release:  2
+Group:    Development/C++
+License:  GPLv2
+Url:    https://github.com/dmtx/libdmtx
+Source0:  https://github.com/dmtx/libdmtx/archive/v%{version}/%{name}-%{version}.tar.gz
 
 %description
 libdmtx is open source software for reading and writing Data Matrix 2D barcodes
@@ -20,17 +20,17 @@ on Linux and Unix. At its core libdmtx is a shared library, allowing C/C++
 programs to use its capabilities without restrictions or overhead.
 
 %package -n %{libname}
-Group:		Development/C++
-Summary:	%{name} library package
+Group:    Development/C++
+Summary:  %{name} library package
 
 %description -n %{libname}
 A library for reading and writing Data Matrix 2D barcodes.
 
 %package -n %{devname}
-Group:		Development/C++
-Summary:	%{name} developement files
-Provides:	%{name}-devel = %{version}-%{release}
-Requires:	%{libname} = %{version}-%{release}
+Group:    Development/C++
+Summary:  %{name} developement files
+Provides: %{name}-devel = %{version}-%{release}
+Requires: %{libname} = %{version}-%{release}
 
 %description -n %{devname}
 This package contains header files needed when building applications based
@@ -55,4 +55,4 @@ on %{name}.
 %{_includedir}/dmtx.h
 %{_libdir}/%{name}.so
 %{_libdir}/pkgconfig/%{name}.pc
-%{_mandir}/man3/%{name}*
+%doc %{_mandir}/man3/%{name}*
