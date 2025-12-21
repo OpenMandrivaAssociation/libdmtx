@@ -14,6 +14,11 @@ License:  GPLv2
 Url:    https://github.com/dmtx/libdmtx
 Source0:  https://github.com/dmtx/libdmtx/archive/v%{version}/%{name}-%{version}.tar.gz
 
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 %description
 libdmtx is open source software for reading and writing Data Matrix 2D barcodes
 on Linux and Unix. At its core libdmtx is a shared library, allowing C/C++
